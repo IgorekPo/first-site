@@ -1,0 +1,190 @@
+.menu__categories {
+  position: absolute;
+  background-color: #666;
+  margin-top: 3px;
+  padding: 10px;
+  min-width: 88px;
+  text-align: center;
+  border-radius: 10px 40px 10px 40px;
+  animation: menuCategori 1s;
+}
+.menu__categories :not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.menu__link-categori a {
+  text-decoration: none;
+  color: white;
+}
+.menu__link-categori a:hover {
+  color: #FF6428;
+}
+
+.menu__item-button._showcategori .menu__categories {
+  display: block;
+}
+
+@keyframes menuCategori {
+  0% {
+    transform: rotateY(90deg);
+  }
+}
+.categories__conteiner {
+  padding: 20px;
+}
+
+.main-block__categories {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+
+.categori__block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 15px;
+}
+
+.categori__image {
+  max-width: 100%;
+}
+
+h5 {
+  margin-bottom: 10px;
+}
+
+.main__informations {
+  margin-left: -50%;
+  color: white;
+  background-color: #606060;
+  transition: all 4s ease 0s;
+}
+
+.categori__block._active .categori__information {
+  display: none;
+}
+
+.categori__block._active .main__informations {
+  position: relative;
+  margin: 0;
+  margin-bottom: 5px;
+  display: block;
+  padding: 10px 10px;
+  transition: all 4s ease 0s;
+  border-radius: 5px;
+  animation: mainInform 1.8s;
+  border-radius: 15% 50% 15% 15%;
+}
+
+@keyframes mainInform {
+  0% {
+    transform: rotateY(90deg);
+  }
+}
+.menu__informations {
+  text-align: center;
+}
+
+.menu__button {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  max-height: 45px;
+  min-height: 45px;
+  border-radius: 40px;
+  background-color: #FF6428;
+}
+
+.categori__block._active .menu__informations .menu__button :first-child {
+  display: none;
+}
+.categori__block._active .menu__informations .menu__button :last-child {
+  display: block;
+  animation: buttonShow 1.8s;
+}
+
+@keyframes buttonShow {
+  0% {
+    transform: rotateY(90deg);
+  }
+}
+.open__button {
+  font-size: 18px;
+  text-align: center;
+  color: #ffff;
+  font-weight: 600;
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 1092px) {
+  .categori__information {
+    font-size: 13px;
+  }
+
+  .open__button {
+    font-size: 13px;
+  }
+
+  .categori__block {
+    gap: 10px;
+  }
+}
+@media (max-width: 991.98px) {
+  .categori__block {
+    gap: 10px;
+  }
+
+  .main__informations {
+    font-size: 13px;
+  }
+
+  .main-block__categories {
+    gap: 40px;
+  }
+}
+@media (max-width: 849.98px) {
+  .open__button {
+    font-size: 10px;
+  }
+
+  .categori__price {
+    font-size: 13px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-block__categories {
+    grid-template-columns: repeat(1, 4fr);
+  }
+
+  .main__informations {
+    font-size: 20px;
+  }
+
+  .open__button {
+    font-size: 20px;
+  }
+
+  .categori__price {
+    font-size: 20px;
+  }
+
+  .categori__information {
+    font-size: 14px;
+  }
+}
+@media (max-width: 479.98px) {
+  .categori__information {
+    font-size: 11px;
+    max-width: 162px;
+    min-height: 157px;
+  }
+
+  .main__informations {
+    font-size: 13px;
+  }
+
+  .open__button {
+    font-size: 11px;
+  }
+}
