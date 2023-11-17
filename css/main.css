@@ -477,7 +477,7 @@ li {
   position: absolute;
   background-color: white;
 }
-.second__buttefly simg {
+.second__buttefly img {
   padding: 26px;
   border-radius: 0;
 }
@@ -612,9 +612,9 @@ li {
   padding-top: 40px;
   padding-bottom: 80px;
 }
-.page__reviews {
-  /* background: linear-gradient(0.25turn, #e66465, #9198e5); */
-}
+/* .page__reviews {
+  background: linear-gradient(0.25turn, #e66465, #9198e5);
+} */
 
 .reviews__title {
   margin-bottom: 100px;

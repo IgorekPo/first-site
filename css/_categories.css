@@ -17,7 +17,7 @@
   color: white;
 }
 .menu__link-categori a:hover {
-  color: #FF6428;
+  color: #ff6428;
 }
 
 .menu__item-button._showcategori .menu__categories {
@@ -93,7 +93,7 @@ h5 {
   max-height: 45px;
   min-height: 45px;
   border-radius: 40px;
-  background-color: #FF6428;
+  background-color: #ff6428;
 }
 
 .categori__block._active .menu__informations .menu__button :first-child {
