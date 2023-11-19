@@ -65,7 +65,7 @@ body {
   text-align: center;
   font-family: CalSans;
   color: #121212;
-  font-size: 44px;
+  font-size: 34px;
   line-height: 1.2;
 }
 .favorite__title span,
@@ -302,7 +302,7 @@ li {
   .favorite__title,
   .reviews__title,
   .why__title {
-    font-size: 38px;
+    font-size: 28px;
   }
 }
 .page {
@@ -771,7 +771,7 @@ li {
 }
 .favorite__title {
   text-align: left;
-  font-size: 48px;
+  font-size: 38px;
   line-height: 140%;
 }
 .favorite__title:not(:last-child) {
@@ -784,21 +784,27 @@ li {
 
 .favorite__conteiner {
   display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .favorite__body {
   flex: 0 1 50%;
   padding-right: 20px;
+  padding-top: 75px;
 }
-
+.favorite__apps,
+.favorite__apps iframe {
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
 .apps-favorite {
-  display: flex;
-  gap: 25px;
-}
-
-.apps-favorite__item img {
-  max-width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fut, minmax(290px, 1fr));
 }
 
 .favorite__images {
@@ -819,7 +825,7 @@ li {
   }
 
   .favorite__title {
-    font-size: 38px;
+    font-size: 28px;
   }
   .favorite__title:not(:last-child) {
     margin-bottom: 25px;
@@ -829,11 +835,18 @@ li {
   .favorite {
     padding-bottom: 30px;
   }
+  .favorite__title {
+    font-size: 23px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 500.98px) {
   .slide-swiper-reviews__text p {
     font-size: 26px;
+  }
+  .favorite__title {
+    font-size: 18px;
   }
 }
 
