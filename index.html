@@ -210,7 +210,7 @@
               </div>
             </div>
             <div class="form__main">
-              <form action="telegram.php" method="post" class="form__body">
+              <form action="" method="POST" class="form__body">
                 <h3>Додайте данні для замовлення</h3>
                 <br />
                 <div class="form__blocks">
@@ -266,9 +266,15 @@
                       <option value="10">10</option>
                     </select>
                   </div>
+
                   <div class="button__block">
                     <button type="submit">Замовити</button>
                   </div>
+                  <div
+                    id="success"
+                    class="alert alert-success"
+                    role="alert"
+                  ></div>
                 </div>
               </form>
             </div>
@@ -355,6 +361,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>

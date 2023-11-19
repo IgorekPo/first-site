@@ -49,3 +49,42 @@ function setScrollBuy(top) {
     behavior: 'smooth',
   });
 }
+
+// Telegram -----------------------------------------------------
+
+const TOKEN = '6751340227:AAF92vFtCP3tSMQpAOb2wl9su694SQ9AQoY';
+const CHAT_ID = '-1001971108708';
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+const success = document.getElementById('success');
+document.querySelector('.form__body').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  let message = `<b>Заказ</b>\n`;
+  message += `<b>ПІБ: </b> ${this.nameSurname.value}\n`;
+  message += `<b>Місто: </b> ${this.City.value}\n`;
+  message += `<b>Телефон: </b> ${this.userphone.value}\n`;
+  message += `<b>Нова Пошта: </b> ${this.novaposhta.value}\n`;
+  message += `<b>Кількість: </b> ${this.value.value}\n`;
+  axios
+    .post(URI_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message,
+    })
+    .then((res) => {
+      this.nameSurname.value = '';
+      this.City.value = '';
+      this.userphone.value = '';
+      this.novaposhta.value = '';
+      this.value.value = '';
+      success.innerHTML = 'Дякую! Замовлення надіслано!';
+      success.style.display = 'block';
+    })
+    .catch((err) => {
+      console.warn(err);
+    })
+    .finelly(() => {
+      console.log('All Good');
+    });
+});
+// ---------------------------------------------------------------

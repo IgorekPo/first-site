@@ -967,6 +967,7 @@ li {
   margin: 25px 0 0 20px;
   background: linear-gradient(0.25turn, #e66465, #9198e5);
 }
+
 .form__body {
   color: white;
   padding: 45px;
@@ -1015,4 +1016,14 @@ li {
   }
 }
 
+.alert-success {
+  display: block;
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  background: linear-gradient(0.25turn, #e66465, #9198e5);
+  border-radius: 20px;
+  padding: 8px 18px;
+  box-shadow: 2px 6px 7px #912929;
+}
 /* ---------------------------------*/
