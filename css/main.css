@@ -790,12 +790,9 @@ li {
 
 .favorite__body {
   flex: 0 1 50%;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 .favorite__apps {
   position: relative;
-  flex: 0 1 50%;
   text-align: center;
   margin: 0px 0px 15px 0px;
   padding: 56% 0px 0px 0px;
@@ -806,7 +803,7 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: auto;
+  padding: 0 10px 0 10px;
 }
 
 .form__main {
