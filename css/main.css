@@ -794,6 +794,7 @@ li {
 }
 .favorite__apps,
 .favorite__apps iframe {
+  margin: 0 0 15px 0;
   object-fit: cover;
   position: relative;
   top: 0;
@@ -804,14 +805,11 @@ li {
 .apps-favorite {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fut, minmax(290px, 1fr));
 }
 
-.favorite__images {
+.form__main {
   flex: 0 1 50%;
   text-align: center;
-}
-.favorite__images img {
   max-width: 100%;
 }
 
