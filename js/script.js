@@ -41,7 +41,9 @@ function setScrollWhy(top) {
 }
 
 let scrollToBuy = document.querySelector('.scroll__buy');
+let scrollToBuyTwo = document.querySelector('.actions-main__button');
 scrollToBuy.addEventListener('click', setScrollBuy);
+scrollToBuyTwo.addEventListener('click', setScrollBuy);
 
 function setScrollBuy(top) {
   let intoBlock = document.querySelector('.page__favorite');
