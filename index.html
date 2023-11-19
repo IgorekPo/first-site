@@ -213,52 +213,62 @@
               <form action="" class="form__body">
                 <h3>Додайте данні для замовлення</h3>
                 <br />
-                <div>
-                  <input
-                    type="text"
-                    name="nameSurname"
-                    placeholder="Ваше ім'я та Призвіще"
-                  />
-                </div>
-                <br />
-                <div>
-                  <input type="text" name="City" placeholder="Місто" />
-                </div>
-                <br />
-                <div>
-                  <input
-                    type="tel"
-                    name="userphone"
-                    placeholder="Ваш телефон"
-                    id="phone"
-                  />
-                </div>
-                <br />
-                <div>
-                  <input
-                    type="number"
-                    name="novaposhta"
-                    placeholder="№ Нової Пошти"
-                  />
-                </div>
-                <br />
-                <div>
-                  <p>Кількість</p>
-                  <select name="value" id="">
-                    <option selected value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                </div>
-                <div>
-                  <button type="submit">Замовити</button>
+                <div class="form__blocks">
+                  <div>
+                    <input
+                      class="inpup__block"
+                      type="text"
+                      name="nameSurname"
+                      placeholder="Ваше ім'я та Призвіще"
+                    />
+                  </div>
+                  <br />
+                  <div>
+                    <input
+                      class="inpup__block"
+                      type="text"
+                      name="City"
+                      placeholder="Місто"
+                    />
+                  </div>
+                  <br />
+                  <div>
+                    <input
+                      class="inpup__block"
+                      type="tel"
+                      name="userphone"
+                      placeholder="Ваш телефон"
+                      id="phone"
+                    />
+                  </div>
+                  <br />
+                  <div>
+                    <input
+                      class="inpup__block"
+                      type="number"
+                      name="novaposhta"
+                      placeholder="№ Нової Пошти"
+                    />
+                  </div>
+                  <br />
+                  <div>
+                    <p class="value">Кількість</p>
+                    <select name="value" id="" class="value__block">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                  <div class="button__block">
+                    <button type="submit">Замовити</button>
+                  </div>
                 </div>
               </form>
             </div>

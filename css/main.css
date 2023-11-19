@@ -971,5 +971,48 @@ li {
   color: white;
   padding: 45px;
 }
+.form__blocks {
+  margin-top: 20px;
+}
+.inpup__block {
+  border-radius: 20px;
+  padding: 5px 15px;
+  box-shadow: 2px 6px 7px #912929;
+  margin-bottom: 10px;
+}
+.value {
+  padding-bottom: 5px;
+}
+.value__block {
+  border-radius: 20px;
+  padding: 4px 9px;
+  box-shadow: 2px 6px 7px #912929;
+  margin-bottom: 30px;
+}
+
+.button__block button {
+  cursor: pointer;
+  background: linear-gradient(0.25turn, #e66465, #9198e5);
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 18px;
+  box-shadow: 2px 6px 7px #912929;
+  margin-bottom: 30px;
+}
+.button__block {
+  transition: 0.8s;
+}
+
+.button__block:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 991.98px) {
+  .form__main {
+    margin: 25px 0 0 0px;
+  }
+}
 
 /* ---------------------------------*/
