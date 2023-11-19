@@ -785,11 +785,11 @@ li {
 .favorite__conteiner {
   display: flex;
   position: relative;
+  margin-top: 20px;
 }
 
 .favorite__body {
   flex: 0 1 50%;
-  /* display: grid; */
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
@@ -806,21 +806,8 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: auto;
 }
-/* .favorite__apps,
-.favorite__apps iframe {
-  margin: 0 0 15px 0;
-  object-fit: cover;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  aspect-ratio: 16/9;
-} */
-/* .apps-favorite {
-  display: grid;
-  gap: 20px;
-} */
 
 .form__main {
   flex: 0 1 50%;
@@ -979,3 +966,5 @@ li {
     padding-top: 50px;
   }
 }
+
+/* FORM ---------------------------------*/
