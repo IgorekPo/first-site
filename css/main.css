@@ -866,7 +866,7 @@ li {
 .favorite__apps {
   position: relative;
   text-align: center;
-  padding: 56% 0px 0px 0px;
+  padding: 65% 0px 0px 0px;
 }
 .favorite__apps iframe {
   position: absolute;
@@ -1008,6 +1008,61 @@ li {
   .form__price {
     font-size: 12px;
     padding: 20px 5px;
+  }
+}
+
+/* ---------------------------------*/
+
+/* feature------------------------------ */
+.feature__body {
+  display: flex;
+  flex: 0 1 50%;
+}
+.feature__body img {
+  width: 100%;
+}
+.feature__conteiner {
+  margin-bottom: 20px;
+  position: relative;
+  flex: 0 1 50%;
+}
+.informations {
+  font-size: 14px;
+  color: white;
+  width: 50%;
+  margin-left: 20px;
+  background: linear-gradient(0.25turn, #e66465, #9198e5);
+  justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.information__block-main {
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(93, 93, 93);
+}
+.information__block-text {
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(93, 93, 93);
+}
+.feature-title {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 991.98px) {
+  .feature__body {
+    flex-direction: column;
+    gap: 10px;
+    margin: 25px 0 0 0px;
+  }
+  .informations {
+    width: 100%;
+    margin-left: 0px;
+    height: 100vh;
+    font-size: 12px;
   }
 }
 /* ---------------------------------*/

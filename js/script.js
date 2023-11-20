@@ -40,18 +40,23 @@ function setScrollWhy(top) {
   });
 }
 
-let scrollToBuy = document.querySelector('.scroll__buy');
-let scrollToBuyTwo = document.querySelector('.actions-main__button');
-scrollToBuy.addEventListener('click', setScrollBuy);
-scrollToBuyTwo.addEventListener('click', setScrollBuy);
+let scrollToFeature = document.querySelector('.scroll__buy');
+scrollToFeature.addEventListener('click', setScrollFeature);
 
+function setScrollFeature(top) {
+  let intoBlock = document.querySelector('.page__feature');
+  intoBlock.scrollIntoView({
+    behavior: 'smooth',
+  });
+}
+let scrollToBuy = document.querySelector('.actions-main__button');
+scrollToBuy.addEventListener('click', setScrollBuy);
 function setScrollBuy(top) {
   let intoBlock = document.querySelector('.page__favorite');
   intoBlock.scrollIntoView({
     behavior: 'smooth',
   });
 }
-
 // Telegram -----------------------------------------------------
 
 const TOKEN = '6751340227:AAF92vFtCP3tSMQpAOb2wl9su694SQ9AQoY';
