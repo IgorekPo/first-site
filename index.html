@@ -214,7 +214,7 @@
           </div>
         </section>
         <section class="page__favorite favorite">
-          <div class="favorite__conteiner">
+          <div class="favorite__conteiner form">
             <div class="favorite__body">
               <h2 class="favorite__title title">
                 Заповніть данні і ми зв'яжемося з Вами протягом
@@ -232,22 +232,21 @@
               </div>
             </div>
             <div class="form__main">
-              <form action="" method="POST" class="form__body">
+              <form action="#" method="POST" id="form" class="form__body" >
                 <h3>Додайте данні для замовлення</h3>
                 <br />
-                <div class="form__blocks">
                   <div>
                     <input
-                      class="inpup__block"
+                      class="input__block _req"
                       type="text"
                       name="nameSurname"
-                      placeholder="Ваше ім'я та Призвіще"
+                      placeholder="Ваше Ім'я та Призвіще"
                     />
                   </div>
                   <br />
                   <div>
                     <input
-                      class="inpup__block"
+                      class="input__block _req"
                       type="text"
                       name="City"
                       placeholder="Місто"
@@ -256,7 +255,7 @@
                   <br />
                   <div>
                     <input
-                      class="inpup__block"
+                      class="input__block _req _phone"
                       type="tel"
                       name="userphone"
                       placeholder="Ваш телефон"
@@ -266,7 +265,7 @@
                   <br />
                   <div>
                     <input
-                      class="inpup__block"
+                      class="input__block _req"
                       type="number"
                       name="novaposhta"
                       placeholder="№ Нової Пошти"
@@ -275,7 +274,7 @@
                   <br />
                   <div>
                     <p class="value">Кількість</p>
-                    <select name="value" id="" class="value__block">
+                    <select name="value" id="select-velue" class="value__block input__block _req">
                       <option selected value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -290,7 +289,7 @@
                   </div>
 
                   <div class="button__block">
-                    <button type="submit">Замовити</button>
+                    <button type="submit" >Замовити</button>
                   </div>
 
                   <div
@@ -299,12 +298,11 @@
                     role="alert"
                     style="display: none"
                   ></div>
-                </div>
               </form>
               <div class="form__price">
                 <div class="form__price-standard">Ціна 1200 грн.</div>
                 <div class="form__price-total">
-                  Загальна вартість: <span>1200 грн. </span>
+                  Загальна вартість: <span class="value-price">1200</span>
                 </div>
               </div>
             </div>

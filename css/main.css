@@ -917,6 +917,9 @@ li {
 }
 
 /* FORM ---------------------------------*/
+.form * {
+  outline: none;
+}
 .form__main {
   margin: 25px 0 0 20px;
   background: linear-gradient(0.25turn, #e66465, #9198e5);
@@ -925,15 +928,24 @@ li {
 .form__body {
   color: white;
   padding: 45px;
+  margin-top: 20px;
 }
 .form__blocks {
   margin-top: 20px;
 }
-.inpup__block {
+
+.input__block {
   border-radius: 20px;
   padding: 5px 15px;
-  box-shadow: 2px 6px 7px #912929;
+  box-shadow: 0 0 7px #010101;
   margin-bottom: 10px;
+  transition: all 0.5s ease 0s;
+}
+.input__block:focus {
+  box-shadow: 0 0 15px #7a965b;
+}
+.input__block._error {
+  box-shadow: 0 0 15px red;
 }
 .value {
   padding-bottom: 5px;
