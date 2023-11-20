@@ -150,8 +150,7 @@ select.addEventListener('change', function () {
   let getValue = this.value;
   let totalPay = document.querySelector('.value-price');
   let showPay = getValue * 1200;
-  totalPay.innerHTML = 1200;
-  totalPay.innerHTML = `${showPay}`;
+  totalPay.innerHTML = `${showPay} грн.`;
   console.log(showPay);
 });
 
