@@ -477,8 +477,6 @@ li {
   font-size: 30px;
   transition: 0.8s;
 }
-.main__actions-button {
-}
 .footer__buy-mobile {
   display: grid;
   align-items: center;
@@ -950,7 +948,7 @@ li {
   box-shadow: 0 0 15px #7a965b;
 }
 .input__block._error {
-  box-shadow: 0 0 15px red;
+  box-shadow: 0 0 10px 5px red;
 }
 .value {
   padding-bottom: 5px;
