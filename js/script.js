@@ -46,6 +46,7 @@ function setScrollWhy(top) {
 }
 
 let scrollToFeature = document.querySelector('.scroll__buy');
+
 scrollToFeature.addEventListener('click', setScrollFeature);
 
 function setScrollFeature(top) {
@@ -54,15 +55,18 @@ function setScrollFeature(top) {
     behavior: 'smooth',
   });
 }
+let scrollToBuyMobile = document.querySelector('.cost__mobile__conteiner');
 let scrollToBuy = document.querySelector('.actions-main__button');
+
+scrollToBuyMobile.addEventListener('click', setScrollBuy);
 scrollToBuy.addEventListener('click', setScrollBuy);
+
 function setScrollBuy(top) {
   let intoBlock = document.querySelector('.page__favorite');
   intoBlock.scrollIntoView({
     behavior: 'smooth',
   });
 }
-
 // ---------------------------------------------------------------
 
 // ----Full Information in FORM-----------------------------------------------------------
@@ -82,11 +86,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let formReq = document.querySelectorAll('._req');
     for (let index = 0; index < formReq.length; index++) {
       const input = formReq[index];
+      const success = document.getElementById('success');
       formRemoveError(input);
 
       if (input.value === '' || validatePhone(phone) == Number) {
         formAddError(input);
-        error++;
+        success.innerHTML = `<span>Будь ласка, заповніть ВСІ поля!</span>`;
+        return error++;
+      } else {
+        success.innerHTML = 'Дякую! Замовлення отримано!';
       }
     }
   }
@@ -129,12 +137,12 @@ document.querySelector('.form__body').addEventListener('submit', function (e) {
     })
 
     .then((res) => {
-      this.nameSurname.value = '';
-      this.City.value = '';
-      this.userphone.value = '';
-      this.novaposhta.value = '';
+      this.nameSurname.value = this.nameSurname.value;
+      this.City.value = this.City.value;
+      this.userphone.value = this.userphone.value;
+      this.novaposhta.value = this.novaposhta.value;
       this.value.value = '1';
-      success.innerHTML = 'Дякую! Замовлення отримано!';
+      // success.innerHTML = 'Дякую! Замовлення отримано!';
       success.style.display = 'block';
     })
     .catch((err) => {
@@ -151,7 +159,6 @@ select.addEventListener('change', function () {
   let totalPay = document.querySelector('.value-price');
   let showPay = getValue * 1200;
   totalPay.innerHTML = `${showPay} грн.`;
-  console.log(showPay);
 });
 
 // ---------------------------------------------------------------
