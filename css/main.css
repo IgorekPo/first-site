@@ -521,7 +521,6 @@ li {
   line-height: 28px;
   font-weight: 600;
   font-size: 24px;
-  width: 50vh;
   margin: 0 auto;
   font-family: CalSans;
 }
@@ -590,7 +589,7 @@ li {
     display: none;
   }
   .cost__mobile__conteiner {
-    display: block;
+    display: flex;
   }
   .main__title {
     font-size: 44px;
