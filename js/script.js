@@ -69,8 +69,10 @@ function setScrollBuy(top) {
 }
 // ---------------------------------------------------------------
 
-// ----Full Information in FORM-----------------------------------------------------------
-
+// ----Full Information in FORM + Telegram-----------------------------------------------------------
+const TOKEN = '6751340227:AAF92vFtCP3tSMQpAOb2wl9su694SQ9AQoY';
+const CHAT_ID = '-1001971108708';
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('form');
   form.addEventListener('submit', formSend);
@@ -79,6 +81,31 @@ document.addEventListener('DOMContentLoaded', function () {
     eventner.preventDefault();
 
     let error = formValidate(form);
+
+    let message = `<b>Заказ</b>\n`;
+    message += `<b>ПІБ: </b> ${this.nameSurname.value}\n`;
+    message += `<b>Місто: </b> ${this.City.value}\n`;
+    message += `<b>Телефон: </b> ${this.userphone.value}\n`;
+    message += `<b>Нова Пошта: </b> ${this.novaposhta.value}\n`;
+    message += `<b>Кількість: </b> ${this.value.value}\n`;
+
+    axios
+      .post(URI_API, {
+        chat_id: CHAT_ID,
+        parse_mode: 'html',
+        text: message,
+      })
+
+      .then((res) => {
+        this.nameSurname.value = '';
+        this.City.value = '';
+        this.userphone.value = '';
+        this.novaposhta.value = '';
+        this.value.value = '1';
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function formValidate(form) {
@@ -90,9 +117,10 @@ document.addEventListener('DOMContentLoaded', function () {
       formRemoveError(input);
 
       if (input.value === '' || validatePhone(phone) == Number) {
-        formAddError(input);
         success.innerHTML = `<span>Будь ласка, заповніть ВСІ поля!</span>`;
-        return error++;
+        formAddError(input);
+        error++;
+        eventner.preventDefault();
       } else {
         success.innerHTML = 'Дякую! Замовлення отримано!';
       }
@@ -110,44 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let re = /^[0-9\s]*$/;
     re.test(Number);
   }
-});
-// ---------------------------------------------------------------
-
-// Telegram -----------------------------------------------------
-
-const TOKEN = '6751340227:AAF92vFtCP3tSMQpAOb2wl9su694SQ9AQoY';
-const CHAT_ID = '-1001971108708';
-const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-const success = document.getElementById('success');
-document.querySelector('.form__body').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  let message = `<b>Заказ</b>\n`;
-  message += `<b>ПІБ: </b> ${this.nameSurname.value}\n`;
-  message += `<b>Місто: </b> ${this.City.value}\n`;
-  message += `<b>Телефон: </b> ${this.userphone.value}\n`;
-  message += `<b>Нова Пошта: </b> ${this.novaposhta.value}\n`;
-  message += `<b>Кількість: </b> ${this.value.value}\n`;
-
-  axios
-    .post(URI_API, {
-      chat_id: CHAT_ID,
-      parse_mode: 'html',
-      text: message,
-    })
-
-    .then((res) => {
-      this.nameSurname.value = this.nameSurname.value;
-      this.City.value = this.City.value;
-      this.userphone.value = this.userphone.value;
-      this.novaposhta.value = this.novaposhta.value;
-      this.value.value = '1';
-      // success.innerHTML = 'Дякую! Замовлення отримано!';
-      success.style.display = 'block';
-    })
-    .catch((err) => {
-      console.log(err);
-    });
 });
 // ---------------------------------------------------------------
 
